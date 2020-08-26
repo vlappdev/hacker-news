@@ -1,0 +1,55 @@
+@import '~bootstrap/scss/bootstrap';
+
+.app{
+  padding-top: 56px;
+}
+.card-body {
+  &  .card{
+    margin-top: 1.25rem;
+  }
+}
+.card{
+  font-size: 0.9rem;
+}
+.arrow{
+  position: relative;
+  cursor: pointer;
+
+  &:after,
+  &:before {
+    border: 7px solid transparent;
+    content: "";
+    display: block;
+    height: 0;
+    right: 5px;
+    top: 50%;
+    position: absolute;
+    width: 0;
+  }
+
+  &:before {
+    border-bottom-color: #666;
+    margin-top: -9px;
+  }
+
+  &.arrow-down{
+    &:before{
+      display: none;
+    }
+    &:after{
+      border-top-color: #666;
+      margin-top: 1px;
+    }
+  }
+}
+.hide-dd{
+  display: none;
+}
+@media(min-width: 992px){
+  .hide-dd{
+    display: block;
+  }
+}
+
+
+
